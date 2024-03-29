@@ -1,0 +1,151 @@
+.header {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+.navbar {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: #F9F7F7;
+  color: var(--color-text);
+  width: 100vw;
+  height: auto;
+}
+
+.buttons {
+  display: flex;
+  align-items: flex-start;
+  align-items: center;
+}
+
+.buttons button {
+  margin-right: 30px;
+  width: auto;
+  padding: 0.3rem 0.7rem;
+}
+
+.buttons div {
+  margin-top: 2px;
+  margin-right: 5px;
+}
+
+.buttons div a {
+  margin: 8px;
+  text-decoration: none;
+}
+
+.navbar-logo {
+  padding-left: 60px;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.02);
+}
+
+.navbar-logo img {
+  width: 300px;
+}
+
+.user{
+  display: flex;
+  align-items: center;
+}
+.user p{
+  color: black;
+}
+
+.user .name{
+  display: flex;
+  flex-direction: column;
+  /* align-items: baseline; */
+  font-size: smaller;
+  margin-right: 1rem;
+}
+.user-logo{
+  font-weight: bold;
+}
+
+.user-logo:hover{
+  background-color: #d6d0d0;
+}
+
+
+@media (min-width: 761px) {
+  nav#mobile {
+    display: none;
+  }
+}
+
+
+@media (max-width: 760px) {
+  .desktop-nav,
+  .buttons {
+    display: none;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .navbar {
+    width: 100vw;
+    height: auto;
+  }
+
+  .navbar-logo {
+    display: flex;
+    width: 50vw;
+    height: auto;
+    padding-left: 0;
+  }
+
+  .navbar img {
+    width: 60vw;
+    max-width: 300px;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+
+  #menu-toggle {
+    color: black;
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: fixed;
+    right: 10px; 
+    top: 10px; 
+  }
+
+  #mobile-menu {
+    display: none;
+    position: fixed;
+    background-color: #F9F7F7;
+    min-width: 30%;
+    right: 0%;
+    padding: 15px;
+    margin-top: 30px; 
+  }
+
+  #mobile-menu.active {
+    display: block;
+  }
+
+  .mobile-menu-items {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .mobile-menu-items a {
+    margin-bottom: 10px;
+  }
+}

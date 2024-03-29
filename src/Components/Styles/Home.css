@@ -1,0 +1,160 @@
+.body {
+  padding-top: 10vh;
+  width: 100%;
+  /* padding-bottom: 10vh; */
+}
+
+.Search-Calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 20px auto;
+}
+
+.search-container .Select {
+  flex: 1;
+}
+
+.search-container {
+  display: flex;
+  gap: 20px;
+}
+*/ .buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.Button-calendario {
+  font-size: medium;
+  font-family: "Poppins";
+  background-color: #122e4f;
+  color: white;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  height: 40px;
+}
+
+.Button-calendario:hover {
+  background-color: #4073af;
+}
+
+.calendars-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.Calendars {
+  flex: 1;
+}
+
+.categories {
+  text-align: center;
+  background-color: #efefef;
+  color: black;
+  margin: 10vh 0vh 10vh 0;
+}
+
+.categories-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 5vh;
+}
+
+.categoria {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.categoria img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.categoria p {
+  margin-top: 5px;
+}
+
+.categoria:hover {
+  transform: scale(1.1);
+}
+
+.cardGrid-1 {
+  margin-top: 7vh;
+  margin-bottom: 5vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cardGrid-2 .card {
+  width: 80%;
+}
+
+.card {
+  width: 60%;
+}
+
+.productos-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 10vh;
+}
+
+.slick-slider {
+  background-color: transparent;
+  margin-bottom: 10vh;
+  border: solid 4px black;
+}
+
+.productos-container .fav-button-div {
+  display: none;
+}
+
+.fav-button-div {
+  text-align: left;
+}
+
+.fav-button {
+  border-radius: 8px 0px 0px 0px;
+  cursor: pointer;
+}
+
+.producto {
+  flex: 0 0 auto;
+  margin-right: 10px;
+  width: 100%;
+}
+
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 760px) {
+  .slick-slide .producto {
+    width: 90% !important;
+    margin: 0 auto 20px !important;
+    max-width: 90% !important;
+  }
+
+  .cardGrid-2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .card-wrapper {
+    width: 90%;
+    margin: 0 auto 20px;
+  }
+}

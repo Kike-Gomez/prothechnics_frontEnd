@@ -1,0 +1,84 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  background-color: #122E4F;
+  color: var(--color-text);
+  padding: 0;
+  width: 100vw;
+  margin-top: auto;
+}
+
+.footer-logo {
+  
+}
+
+.footer-logo img {
+  width: 300px;
+}
+
+.footer-copyright {
+  padding-right: 60px;
+}
+
+.footer-iconos {
+  display: inline-block;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-iconos img {
+  padding: 10px;
+}
+
+.copyright {
+  color: white;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.btn-terminos {
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.swal2-icon-question {
+  width: 60em;
+}
+
+
+@media (max-width: 760px) {
+  .footer{
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 100vw;
+    height: auto;
+  }
+  .footer-logo{
+    padding: 0;
+    padding-top: 5%;
+  }
+  .footer img{
+    width: 80%;
+  }
+  .footer-copyright{
+    padding: 0;
+    padding-bottom: 5%;
+  }
+.footer-iconos{
+  display:block;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 5%;
+}
+.footer-iconos img{
+  width: 8%;
+}
+  }
