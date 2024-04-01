@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import '../Components/Styles/AdminFeatures.css'
 import requestToAPI from '../services/requestToAPI';
 import IconButton from '../Components/IconButton';
