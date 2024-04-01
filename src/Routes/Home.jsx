@@ -11,7 +11,7 @@ import { useFavContext } from "../Components/FavContext.jsx";
 import Swal from "sweetalert2";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import "../Components/styles/Home.css";
+import "../Components/Styles/Home.css";
 
 const Home = () => {
   const [categorias, setCategorias] = useState([]);
@@ -71,7 +71,7 @@ const Home = () => {
     async function fetchRandomProducts() {
       try {
         const productosResponse = await requestToAPI(
-          "products/find/random/10",
+          "products/find/random/12",
           "GET"
         );
         setProductosRecomendados(productosResponse);
@@ -121,7 +121,7 @@ const Home = () => {
   };
 
   const handleProductoSelect = async (product) => {
-    setProductId(product.id); // Guardar el productId al seleccionar un producto
+    setProductId(product.id); 
     setSelectedProduct(product);
     try {
       const url = `rentals/find/product/${product.id}`;
@@ -207,7 +207,7 @@ const Home = () => {
   return (
     <div className="body">
       <div className="Search-Calendar">
-        <h1>¿Querés consultar la disponibilidad de un producto?</h1>
+        <h1>¿Querés consultar la DISPONIBILIDAD de un producto?</h1>
         <p>
           Seleccioná el producto que estés buscando, elegí una fecha de inicio y
           devolución del producto y realizá tu búsqueda
@@ -231,7 +231,7 @@ const Home = () => {
               }}
               onSelectDates={handleSelectDates}
               onSelectProduct={handleProductoSelect}
-              productId={productId} // Asegúrate de pasar el productId aquí
+              productId={productId} 
             />
           </div>
         )}
@@ -264,7 +264,7 @@ const Home = () => {
       </div>
       {mostrarProductosPorCategoria && (
         <div className="productos-por-categoria">
-          <h1>{categoriaSeleccionada}</h1>
+          <h1>{categoriaSeleccionada} ({productosPorCategoria.length} productos encontrados)</h1>
           <Slider {...sliderSettings}>
             {productosPorCategoria.map((producto) => {
               console.log("Productos por categoría:", productosPorCategoria);
@@ -278,6 +278,7 @@ const Home = () => {
                       <Card product={producto} userData={userData} />
                     </div>
                   </div>
+                  
                 </div>
               );
             })}

@@ -1,0 +1,13 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ec2-user/Proyecto-Integrador/PI-C3-G4/
+hooks:
+  AfterInstall:
+    - location: package.json
+      timeout: 300
+      runas: ec2-user
+      commands:
+        - npm install
+        - npm run build
